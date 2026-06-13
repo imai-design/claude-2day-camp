@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>自分専用の新聞｜ネタ元リスト</title>
+<style>
+:root{
+  --ink:#2b2118; --sub:#7a6a58; --line:#ece3d8;
+  --bg:#faf6f0; --bg-soft:#f3eee7; --paper:#fff;
+  --accent:#c8633e; --accent-deep:#a94f2e; --accent-soft:#fbeee6;
+  --ok:#5a8a5a; --warn:#b07d2b;
+  --radius:14px; --radius-sm:8px; --pill:999px;
+  --shadow-sm:0 4px 16px rgba(43,33,24,.05);
+  --maxw:880px;
+  --font:-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased;line-height:1.7;font-size:16px;}
+a{color:var(--accent);font-weight:600;}
+h1{font-size:clamp(24px,5vw,36px);line-height:1.3;margin:0;}
+h2{font-size:20px;margin:0;}
+h3{font-size:16px;margin:0;}
+p{margin:0;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+.toolbar{position:sticky;top:0;z-index:50;display:flex;gap:10px;align-items:center;padding:10px 16px;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.toolbar .t{font-weight:700;font-size:14px;color:var(--sub);margin-right:auto;}
+.toolbar button{font:inherit;font-size:13px;font-weight:600;cursor:pointer;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:7px 14px;border-radius:var(--radius-sm);}
+.toolbar button:hover{border-color:var(--accent);color:var(--accent);}
+.hero{padding:54px 0 40px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fbf5ec 0%,var(--bg) 100%);}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--accent);background:var(--accent-soft);padding:6px 14px;border-radius:var(--pill);margin-bottom:16px;}
+.hero .sub{color:var(--sub);font-size:16px;margin-top:18px;max-width:680px;}
+.section{padding:40px 0;}
+.note{font-size:14px;color:var(--sub);background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:var(--radius-sm);padding:14px 18px;margin:22px 0;}
+.cat{font-size:20px;margin:34px 0 4px;display:flex;align-items:center;gap:10px;}
+.cat .ic{font-size:24px;}
+.cat-sub{color:var(--sub);font-size:14px;margin-bottom:14px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow-sm);}
+.card h3{font-size:16px;margin-bottom:4px;}
+.card .what{color:var(--sub);font-size:14px;margin:6px 0 10px;}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:var(--pill);background:var(--bg-soft);color:var(--sub);}
+.tag.rss{background:#fdeede;color:#b5651d;}
+.tag.api{background:#e7f0fb;color:#2f74c0;}
+.tag.csv{background:#e9f5ec;color:#2f9e5e;}
+.tag.data{background:#f1ecf7;color:#7a5aa6;}
+.card .open{display:inline-block;margin-top:10px;font-size:14px;}
+footer{margin-top:30px;padding:30px 0 60px;text-align:center;font-size:12px;color:var(--sub);border-top:1px solid var(--line);}
+@media print{.toolbar{display:none;}.card{box-shadow:none;}}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <span class="t">自分専用の新聞 ｜ ネタ元リスト</span>
+  <button onclick="window.print()">印刷 / PDF保存</button>
+</div>
+
+<section class="hero"><div class="wrap">
+  <span class="eyebrow">CLAUDE入門 2日CAMP ｜ Cowork Vol.7 補助資料</span>
+  <h1>自分専用の新聞の「ネタ元」リスト</h1>
+  <p class="sub">毎朝の新聞を自分で作るための、情報のとり先をまとめました。ここに載せたのは、RSS・公開API・オープンデータを公式に出していて、AIが自動でとってきても問題ないサイトだけです。気になる行のリンクを見て、好きなものを組み合わせてください。</p>
+</div></section>
+
+<section class="section"><div class="wrap">
+
+  <div class="note">
+    <b>選び方のコツ</b>：ログインが必要なサイトや「自動取得は禁止」と書いてあるサイトは避けます。下のサイトは、もともと「持っていって使ってね」と公式に配っているものなので安心して使えます。まずは2〜3個えらんで「これとこれで毎朝7時に新聞を作って」と頼むのがおすすめです。
+  </div>
+
+  <div class="cat"><span class="ic">📰</span><h2>ニュース</h2></div>
+  <div class="cat-sub">いちばん新聞らしいネタ元。見出しと要約がそのまま並びます。</div>
+  <div class="grid">
+    <div class="card"><h3>NHKニュース</h3><span class="tag rss">RSS</span><p class="what">主要・経済・科学などジャンル別の見出し。日本語ニュースの定番。</p><a class="open" href="https://www.nhk.or.jp/toppage/rss/index.html" target="_blank">フィード一覧を開く</a></div>
+    <div class="card"><h3>Googleニュース</h3><span class="tag rss">RSS</span><p class="what">キーワードを決めると、その話題のニュースだけ集まる。業界・自社名で追える。</p><a class="open" href="https://news.google.com/rss?hl=ja&gl=JP&ceid=JP:ja" target="_blank">日本語トップを開く</a></div>
+    <div class="card"><h3>はてなブックマーク</h3><span class="tag rss">RSS</span><p class="what">いま話題の記事ランキング。IT・世の中など。トレンドの肌感がつかめる。</p><a class="open" href="https://b.hatena.ne.jp/hotentry/it.rss" target="_blank">人気IT記事を開く</a></div>
+  </div>
+
+  <div class="cat"><span class="ic">📈</span><h2>株価・為替・経済</h2></div>
+  <div class="cat-sub">社会人にいちばん効くネタ元。朝に数字をチェックする習慣が新聞でできます。</div>
+  <div class="grid">
+    <div class="card"><h3>Stooq（ストゥーク）</h3><span class="tag csv">CSV</span><p class="what">日経平均・ダウ・個別株などの株価をCSVで配布。無料・登録不要。</p><a class="open" href="https://stooq.com/q/d/l/?s=^nkx&i=d" target="_blank">日経平均のCSV例</a></div>
+    <div class="card"><h3>ExchangeRate-API</h3><span class="tag api">API</span><p class="what">ドル円など為替レート。登録不要で叩ける無料API。</p><a class="open" href="https://open.er-api.com/v6/latest/USD" target="_blank">ドル基準レートを開く</a></div>
+    <div class="card"><h3>CoinGecko</h3><span class="tag api">API</span><p class="what">ビットコインなど暗号資産の価格。無料・公開API。</p><a class="open" href="https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=jpy" target="_blank">ビットコイン価格を開く</a></div>
+  </div>
+
+  <div class="cat"><span class="ic">🌤</span><h2>天気</h2></div>
+  <div class="cat-sub">朝の新聞に1行あると便利。今日の予報を地域別でとれます。</div>
+  <div class="grid">
+    <div class="card"><h3>気象庁</h3><span class="tag api">API</span><p class="what">公式の天気予報データ。地域コードを変えると全国どこでも取れる（例は東京）。</p><a class="open" href="https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json" target="_blank">東京の予報を開く</a></div>
+  </div>
+
+  <div class="cat"><span class="ic">💻</span><h2>テック・ビジネス</h2></div>
+  <div class="cat-sub">業界の動きを追いたい人向け。海外の話題も拾えます。</div>
+  <div class="grid">
+    <div class="card"><h3>Qiita</h3><span class="tag rss">RSS</span><p class="what">人気の技術記事ランキング。エンジニア向けの話題がわかる。</p><a class="open" href="https://qiita.com/popular-items/feed" target="_blank">人気記事を開く</a></div>
+    <div class="card"><h3>Hacker News</h3><span class="tag api">API</span><p class="what">海外のテック・スタートアップ話題。無料の公開API。</p><a class="open" href="https://hacker-news.firebaseio.com/v0/topstories.json" target="_blank">トップ記事IDを開く</a></div>
+  </div>
+
+  <div class="cat"><span class="ic">🏛</span><h2>政府・公共データ</h2></div>
+  <div class="cat-sub">統計や公式情報を新聞に混ぜたい人向け。</div>
+  <div class="grid">
+    <div class="card"><h3>e-Stat（政府統計）</h3><span class="tag data">オープンデータ</span><p class="what">人口・物価などの公式統計。使うときは無料のАPIキー登録が必要。</p><a class="open" href="https://www.e-stat.go.jp/" target="_blank">サイトを開く</a></div>
+  </div>
+
+  <div class="note" style="background:var(--bg-soft);border-left-color:var(--ok);">
+    <b>新聞にする頼み方の例</b>：「NHKニュースの経済、日経平均のCSV、東京の天気を毎朝7時に集めて、見出しと一言コメントをつけた新聞にして。長すぎないようにA4一枚で。」── このくらいざっくりで大丈夫です。
+  </div>
+
+</div></section>
+
+<footer>
+  Claude入門 2日CAMP ｜ Cowork Vol.7 補助資料（ネタ元リスト）・ 2026-06-13 作成<br>
+  ここに載せたのは、RSS・公開API・オープンデータを公式に提供しているサイトです。各サイトの利用条件は変わることがあるので、業務で本格利用する前に各サイトの規約をご確認ください。
+</footer>
+
+</body>
+</html>
